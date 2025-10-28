@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연시의 등굣길</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 시작 화면 -->
+    <div id="startScreen" class="screen active">
+        <!-- 배경 영상 -->
+        <video id="bgVideo" autoplay loop muted playsinline>
+            <source src="videos/연시의_등굣길.mp4" type="video/mp4">
+            <source src="videos/연시의_등굣길.webm" type="video/webm">
+            <!-- 영상이 없을 경우를 대비한 대체 배경색 -->
+        </video>
+
+        <!-- 어두운 오버레이 -->
+        <div class="overlay"></div>
+
+        <!-- 게임 타이틀과 안내 문구 -->
+        <div class="content">
+            <h1 class="game-title">연시의 등굣길</h1>
+            <p class="start-text">클릭하여 시작</p>
+        </div>
+    </div>
+
+    <!-- 게임 화면 (나중에 구현) -->
+    <div id="gameScreen" class="screen">
+        <div class="game-content">
+            <h2>게임이 시작되었습니다!</h2>
+            <p>여기에 게임 내용이 들어갑니다.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

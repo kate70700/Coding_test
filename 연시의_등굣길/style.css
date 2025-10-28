@@ -1,0 +1,161 @@
+/* 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* 화면 공통 스타일 */
+.screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.screen.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* 시작 화면 */
+#startScreen {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* 배경 영상 */
+#bgVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    object-fit: cover;
+}
+
+/* 영상이 로드되지 않았을 때를 대비한 배경 */
+#startScreen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: -3;
+}
+
+/* 어두운 오버레이 (텍스트 가독성 향상) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* 콘텐츠 */
+.content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+/* 게임 타이틀 */
+.game-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.1em;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+/* 시작 안내 텍스트 */
+.start-text {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: blink 2s infinite;
+}
+
+/* 게임 화면 */
+#gameScreen {
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.game-content {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.game-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.game-content p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* 애니메이션 */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .game-title {
+        font-size: 2.5rem;
+    }
+
+    .start-text {
+        font-size: 1.2rem;
+    }
+
+    .game-content h2 {
+        font-size: 2rem;
+    }
+
+    .game-content p {
+        font-size: 1.2rem;
+    }
+}
