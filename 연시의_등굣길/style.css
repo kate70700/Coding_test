@@ -31,8 +31,9 @@ body {
 /* 시작 화면 */
 #startScreen {
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
+    padding-bottom: 5rem;
 }
 
 /* 배경 영상 */
@@ -143,6 +144,10 @@ body {
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
+    #startScreen {
+        padding-bottom: 3rem;
+    }
+
     .game-title-image {
         max-width: 90%;
         margin-bottom: 2rem;
