@@ -89,12 +89,10 @@ body {
     animation: fadeInDown 1.5s ease-out;
 }
 
-/* 시작 안내 이미지 */
-.start-text-image {
-    max-width: 60%;
-    width: auto;
-    height: auto;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+/* 시작 안내 텍스트 */
+.start-text {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     animation: blink 2s infinite;
 }
 
@@ -150,8 +148,8 @@ body {
         margin-bottom: 2rem;
     }
 
-    .start-text-image {
-        max-width: 70%;
+    .start-text {
+        font-size: 1.2rem;
     }
 
     .game-content h2 {
