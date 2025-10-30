@@ -1,0 +1,31 @@
+# 컴파일된 클래스 파일
+*.class
+bin/
+
+# 로그 파일
+*.log
+
+# IDE 설정 파일
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# 운영체제 파일
+.DS_Store
+Thumbs.db
+
+# 음원 파일 (저작권 문제 방지)
+resources/sounds/*.wav
+resources/sounds/*.mp3
+
+# 이미지 파일 (용량 문제)
+resources/images/*.png
+resources/images/*.jpg
+resources/images/*.jpeg
+
+# README 파일은 포함
+!resources/sounds/README.md
+!resources/images/README.md
