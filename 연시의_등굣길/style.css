@@ -31,8 +31,9 @@ body {
 /* 시작 화면 */
 #startScreen {
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
+    padding-bottom: 5rem;
 }
 
 /* 배경 영상 */
@@ -79,13 +80,13 @@ body {
     z-index: 1;
 }
 
-/* 게임 타이틀 */
-.game-title {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    letter-spacing: 0.1em;
+/* 게임 타이틀 이미지 */
+.game-title-image {
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    margin-bottom: 3rem;
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.7));
     animation: fadeInDown 1.5s ease-out;
 }
 
@@ -143,8 +144,13 @@ body {
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
-    .game-title {
-        font-size: 2.5rem;
+    #startScreen {
+        padding-bottom: 3rem;
+    }
+
+    .game-title-image {
+        max-width: 90%;
+        margin-bottom: 2rem;
     }
 
     .start-text {
